@@ -1,0 +1,191 @@
+<h3 class="text-danger text-center " appHighlighter>Reactive Form (Validation)</h3>
+<div class="container-fluid col-8">
+    <!-- <form #form>
+        <div class="form-group">
+            <label for="Name">First Name: </label> &nbsp;
+            <input type="text" name="name" id="" class="form-control" [formControl]="firstName"
+             required>
+        </div>
+        <div [hidden]="firstName.valid || firstName.dirty ||firstName.untouched" 
+        class="alert alert-danger">
+            Enter your first name</div>
+        <div class="form-group ">
+            <label for="Name">Last Name: </label> &nbsp;
+            <input type="text" name="name" id="" class="form-control" [formControl]="lastName" required>
+        </div>
+        <div [hidden]="lastName.valid || lastName.dirty || lastName.untouched" class="alert alert-danger">
+            Enter your Last name</div>
+            <div>
+                <button class="btn btn-success" (click)="onsubmit()">Submit</button>
+            </div>
+    </form> -->
+
+    <table class="table table-sm text-center bg-success ">
+        <tr class="text-white">
+            <th>Id</th>
+            <th>course</th>
+            <th>college</th>
+            <th>location</th>
+            <th>duration</th>
+            <th>Student Name</th>
+            <th>Student Address</th>
+            <th>Action</th>
+        </tr>
+        <tr class="bg-info" *ngFor="let item of courseDetails; index as i">
+            <td>{{i + 1}}</td>
+            <td>{{item.course}}</td>
+            <td>{{item.college}}</td>
+            <td>{{item.location}}</td>
+            <td>{{item.duration}}</td>
+            <td>{{item.name}}</td>
+            <td>{{item.address}}</td>
+            <td>
+                <!-- <button class="btn btn-danger" (click)="Delete(item)">Delete</button>&nbsp; -->
+                <!-- <button (click)="tblupdate(item)">Update</button>&nbsp; -->
+                <!-- <button class="btn btn-success" (click)="Edit(item)" [routerLink]="['/navigate',{x:item.name}]">
+                    Edit </button> -->
+                <button class="btn btn-danger">Delete</button>&nbsp;
+
+                <!-- <button class="btn btn-success" (click)="next()">
+                    Edit </button> -->
+                <!-- <button class="btn btn-success" 
+                [routerLink]="['/navigate',{
+                                a:'Macchindra',
+                                b:'ragini',
+                                course:item.course,
+                                college:item.college,
+                                location:item.location,
+                                duration:item.duration,
+                                name:item.name,
+                                address:item.address
+                            }]">
+                    Edit </button> -->
+                <!-- Activated route service-->
+
+                <!-- router service -->
+                <!-- <button [routerLink]="['/navigate']"  [state]='{x:"hello",a:item.course,b:item.college}' >edit</button> -->
+                <!-- <button (click)="sendx(item)" >edit</button> -->
+                <button class="btn btn-success" [routerLink]="['/navigate']" [state]='{x:"hello"}'>
+                    Edit </button>
+            </td>
+        </tr>
+    </table>
+    <!-- <router-outlet></router-outlet> -->
+    <!-- <div class="text-center">
+        <span class="spinner-grow spinner-grow-sm text-success"></span> Education Details <span
+            class="spinner-grow spinner-grow-sm text-primary"></span>
+    </div>
+    <form [formGroup]="educationDetails">
+        <div>
+            <label for="course">Course Name:</label> &nbsp;
+            <input type="text" name="course" id="" class="form-control" formControlName="course" required
+                maxlength="10">
+            <div class=" alert-danger" [hidden]=" educationDetails.controls['course'].valid ||
+            educationDetails.controls['course'].dirty        
+             || educationDetails.controls['course'].untouched">
+                Enter your course Name
+            </div>
+            <div class="alert-danger" *ngIf="educationDetails.controls['course']?.hasError('pattern')
+             && educationDetails.controls['course'].invalid">
+                course name is min 3 and max 10 length (only Characters accepted)
+            </div> -->
+
+
+
+    <!--    <div *ngIf="educationDetails.controls['course'].invalid && 
+                            (educationDetails.controls['course'].dirty || 
+                  educationDetails.controls['course'].touched)" class="alert-danger">
+                <div *ngIf="educationDetails.controls['course'].errors required">
+                        enter the course
+                </div>
+             </div>      -->
+
+</div>
+
+
+
+<!-- <div  *ngIf="educationDetails.controls['course']?.hasError('required') &&  educationDetails.controls['course'].invalid ">
+                Duration must be at least 1 characters long.
+            </div> -->
+
+
+<!-- 
+
+        <div>
+            <label for="college">College Name:</label> &nbsp;
+            <input type="text" name="college" id="" class="form-control" formControlName="college" required
+                maxlength="10">
+            <div class=" alert-danger" [hidden]="  educationDetails.controls['college'].valid || 
+                        educationDetails.controls['college'].untouched || 
+                        educationDetails.controls['college'].dirty">
+                Enter your college Name
+            </div>
+            <div class="alert-danger" *ngIf="educationDetails.controls['college']?.hasError('pattern') && 
+            educationDetails.controls['college'].invalid">
+                please enter minlength=5 and maxlenght=10 </div>
+        </div>
+        <div>
+            <label for="location">College Location:</label> &nbsp;
+            <input type="text" name="location" id="" class="form-control" formControlName="location" required
+                maxlength="10">
+            <div class=" alert-danger" [hidden]="  educationDetails.controls['location'].valid || 
+                        educationDetails.controls['location'].untouched || 
+                        educationDetails.controls['location'].dirty">
+                Enter your college address
+            </div>
+        </div>
+        <div>
+            <label for="duration">Duration:</label> &nbsp;
+            <input type="text" name="duration" id="" class="form-control" formControlName="duration" required
+                maxlength="1">
+            <div class=" alert-danger" [hidden]="  educationDetails.controls['duration'].valid || 
+                    educationDetails.controls['duration'].untouched || 
+                    educationDetails.controls['duration'].dirty">
+                Enter your college duration
+            </div>
+            <div class="alert-danger" *ngIf="educationDetails.controls['duration']?.hasError('pattern') && 
+            educationDetails.controls['duration'].invalid">
+                enter only number with min & max length is=1 </div>
+
+        </div>
+        <div class="margin">
+            <button (click)="onSubmit()" class="btn btn-success ">Submit</button>&nbsp;
+            <button (click)="update()" class="btn btn-primary">Update</button>&nbsp;
+            <button (click)="reset()" class="btn btn-danger">Reset</button>
+        </div>
+
+
+    </form>
+</div> <br>
+<div class="container-fluid col-6">
+    <div class="text-center ">
+        <span class="spinner-grow spinner-grow-sm text-danger"></span>
+        Personal Details
+        <span class="spinner-grow spinner-grow-sm text-danger"></span>
+    </div>
+    <form [formGroup]="personalDetails">
+        <div>
+            <label for="Name">Name :</label>
+            <input type="text" name="name" id="" class="form-control" formControlName="name" required>
+            <div class=" alert-danger" [hidden]="personalDetails.controls['name'].valid ||
+            personalDetails.controls['name'].untouched ||
+            personalDetails.controls['name'].dirty">Name is required</div>
+            <label for="address">Address :</label>
+            <input type="text" name="address" id="" class="form-control" formControlName="address" required>
+            <div class=" alert-danger" [hidden]="personalDetails.controls['address'].valid ||
+            personalDetails.controls['address'].untouched ||
+            personalDetails.controls['address'].dirty">Address is required</div>
+
+        </div>
+
+    </form>
+</div> -->
+
+
+
+
+<!-- <img [src]="src" alt="hello">
+{{src}} -->
+
+
+<!-- <button (click)="next()">Next</button> -->

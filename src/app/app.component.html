@@ -1,0 +1,122 @@
+<!-- 
+    <div class="center">
+        <h1>Students Registration Details</h1>
+        <div class="margin"> Name:
+            <input type="text" placeholder="Enter your name" maxlength="30" #name>
+        </div>
+        <div class="margin"> Address:
+            <input type="text" placeholder="Enter your address" #add>
+        </div>
+        <div class="margin"> Mobile No:
+            <input type="text" maxlength="10" placeholder="Enter 10 digit mobile no" #mobileno>
+        </div>
+        <div class="margin"> Gender:
+            <input type="radio" name="fav_language"> Male
+            <span class="margin">
+                <input type="radio" name="fav_language"> Female</span>
+        </div>
+        <div class="margin">
+            <button (click)="display()" type="submit" class="button">Submit</button>
+        </div> -->
+<!-- <table class="table">
+            <tr>
+                <th>Sr.No.</th>
+                <th>Name</th>
+                <th>Address</th>
+                <th>Mobile No.</th>
+            </tr>
+            <tr>
+                <td>01</td>
+                <td>{{name.value}}</td>
+                <td>{{add.value}}</td>
+                <td>{{mobileno.value}}</td>
+            </tr>
+            <tr>
+                <td>02</td>
+                <td>{{name.value}}</td>
+                <td>{{add.value}}</td>
+                <td>{{mobileno.value}}</td>
+            </tr>
+            <tr>
+                <td>03</td>
+                <td>{{name.value}}</td>
+                <td>{{add.value}}</td>
+                <td>{{mobileno.value}}</td>
+            </tr>
+        </table>
+    </div> -->
+<!-- 
+    <table class="table">
+        <tr>
+            <th>sr no</th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Mobile Number</th>
+        </tr>
+        <tr *ngFor="let stud of students; index as i " >
+            <td>{{i + 1}}</td>
+            <td>{{stud.name}}</td>
+            <td>{{stud.Address}}</td>
+            <td>{{stud.Mobileno}}</td>
+        </tr>
+    </table> -->
+<!-- <img [src]="src" alt=""> -->
+<!-- <h3> Student List:</h3>
+<ol >
+        <li>Pratik</li>
+        <li>Swapnil</li>
+        <li>Rushikesh</li>
+        <li>Sainath</li>
+        <li>Rahul</li>
+</ol> -->
+
+<!-- property binding 
+  data flow  source to view => {{}} , []
+event binding
+view to source ()   
+-->
+<!-- {{  message}} -->
+
+
+<!-- [[[ 1 ]]]    Input and Output -->
+<!-- <app-parent></app-parent> -->
+<!-- Parent component selector, for parant ui display in browser
+    (for this selector we create exports property in feature module (i.e. component-fundamental.module.ts file)) -->
+
+<!-- [[[ 2 ]]]    Attribute Directive -->
+<!-- <app-attributedirecive></app-attributedirecive> -->
+
+<!-- [[[ 3 ]]]   Template-Driven Form (Validation) -->
+<!-- <app-loginform></app-loginform>     -->
+
+<!-- [[[ 4 ]]]   Reactive Form (Validation) -->
+<!-- <app-signupform></app-signupform> -->
+<!-- <app-demo></app-demo> -->
+<div>
+
+    <nav class="navbar navbar-dark bg-dark">
+        <span>
+
+            &nbsp; <a routerLink="/attributeDirective">Attribute Directive</a> &nbsp;
+            <a routerLink="/inputOutput">Input and Output</a>&nbsp;
+            <a routerLink="/templateDrivenForm">Normal Validation</a> &nbsp;
+            <a routerLink="/reactiveForm">Reactive Form Validation</a>&nbsp;
+            <a routerLink="/observable">Observable</a>&nbsp;
+            <a routerLink="/practice">Mock Pracice</a>&nbsp;
+        </span>
+    </nav>
+
+</div>
+<!-- <div>
+    <mat-drawer-container class="example-container">
+
+    <mat-drawer mode="side" opened>Drawer content</mat-drawer>
+  <mat-drawer-content>Main content</mat-drawer-content>
+</mat-drawer-container>
+
+</div> -->
+<div>
+    <router-outlet></router-outlet>
+</div>
+<!-- <span class="loader"></span> -->
+

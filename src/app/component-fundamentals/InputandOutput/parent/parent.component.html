@@ -1,0 +1,46 @@
+<h3 class="text-danger text-center ">Input and Output</h3>
+<!-- <div class="parent"> -->
+<div class="parent flex-container">
+    <div #table class="flex-child magenta">
+        <!-- {{detailsofchild}} -->
+        <div class="parentflex">
+            <h4>@parent works!</h4>
+            <hr>
+            <table class="table table-sm text-center bg-success ">
+                <tr class="text-white">
+                    <th>name</th>
+                    <th>Address</th>
+                    <th>Mobileno</th>
+
+                </tr>
+                <tr class="bg-info" *ngFor="let item of detailsofchild">
+                    <td>{{item}}</td>
+                    <td>{{item}}</td>
+                    <td>{{item}}</td>
+
+                </tr>
+            </table>
+        </div>
+        <div>
+            {{detailsfromchild}}
+        </div>
+
+
+        {{show}} <br>
+    </div>
+    <!-- </div> <br> -->
+
+    <div class="flex-child green">
+        <!-- <div [value]="mytext"></div> -->
+
+        <!--        
+           [Input property]='Parent Property'          (Output property)="Parent Method"      
+                    |            |                             |        $event => it is event itself we can access event emitter events using $event
+                    v            v                             v    -->
+        <app-child [childData]='ashish' [data]='parentdata' [parentobj]='students' (childevent)="parentmethod($event)"
+            (childobj)="listdata($event)">
+        </app-child> <!-- child selector (child UI/HTML page)-->
+    </div>
+</div>
+<!-- 
+<img [src]="src" alt="aaa"> -->

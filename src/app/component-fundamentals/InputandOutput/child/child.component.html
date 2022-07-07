@@ -1,0 +1,36 @@
+<div class="child ">
+    <!-- <div> -->
+    <!-- <div []="msg" ></div> -->
+    <h4>@child works!</h4>
+    <hr>
+    <div>{{childData}}</div>
+    <hr> <!-- Input Property in this property parent data is display-->
+    <div>{{data}}</div>
+    <hr>
+    <div>{{parentobj | json}}</div>
+    <div>{{childobj}}</div>
+    <hr>
+    <div style="background-color:brown">
+        <button (click)="send()">Output decorator</button>
+
+    </div>
+    <button class="button" (click)="displaychilddata()"> send data to parent</button>
+
+    <div>
+        <button (click)="list()"> Send data form array</button>
+    </div>
+</div>
+<!-- <table class="table">
+    <tr>
+        <th>sr no</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Mobile Number</th>
+    </tr>
+    <tr *ngFor="let stud of students; index as i ">
+        <td>{{i+1}}</td>
+        <td>{{stud.name}}</td>
+        <td>{{stud.Address}}</td>
+        <td>{{stud.Mobileno}}</td>
+    </tr>
+</table><br> -->

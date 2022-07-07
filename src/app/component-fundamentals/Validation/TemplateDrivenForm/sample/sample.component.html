@@ -1,0 +1,35 @@
+<p>sample works!</p>
+<!-- 
+
+<form #all="ngForm">
+    <div>
+        <label for="name">Name :</label>
+        <input [(ngModel)]="name" type="text" name="" id="" #field="ngModel">
+    </div>
+</form> -->
+
+<form #Form="ngForm" >
+    <div>
+
+        name: <input [(ngModel)]="name" type="text" #field="ngModel" required maxlength="5" 
+        pattern="[^ @]*@[^ @]*"> 
+        <div class="alert-danger" [hidden]="field.valid || field.touched || field.dirty">
+            enter the name
+        </div>
+
+        <div *ngIf="field.errors && (field.touched || field.dirty)">
+            <!-- <p *ngIf="field.errors.pattern">Name is required</p> -->
+
+
+        </div>
+        <!-- <div *ngIf=" Form.controls['name']?.hasError('pattern') && 
+        Form.controls['name'].invalid  "> 
+  name is required
+        </div> -->
+        <br>
+        <br>
+        <button (click)="Alert()" >Save</button>
+    </div>
+    <!-- {{store}} -->
+</form>
+

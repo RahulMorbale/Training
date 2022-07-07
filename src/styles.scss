@@ -1,0 +1,45 @@
+
+/* You can add global styles to this file, and also import other style files */
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+
+// .table,th,td,tr{
+//     border: 2px solid black;
+//     border-color: black ;
+//     border-collapse: collapse;
+//     text-align: center;
+//     background-color: rgb(87, 203, 241);
+//     // padding: 3px 10px;
+//     // width:50%;
+//     // scale: initial;
+// }
+// .table{
+//     // margin-left: 30%;
+//     // width: 40%;
+//     background-color: rgb(87, 203, 241);
+//     width:80%;
+// }
+.button{
+    font-size: large;
+    background-color: rgb(94, 213, 136);
+    width: 100%;
+    color:rgb(38, 0, 255);
+    padding: 1%;
+}
+.center{
+    text-align:center;
+}
+.margin{
+    margin: 1% ;
+}
+.button:hover{
+    color: crimson;
+    border: crimson solid 1px;
+    background-color: lime;
+    scale: initial;
+}
+
+input.invalid{
+    border-color: red;
+}
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

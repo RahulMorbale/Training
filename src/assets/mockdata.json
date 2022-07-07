@@ -1,0 +1,34 @@
+{
+    "studentDetails":[
+        {
+            "Name": "Rahul",
+            "Address": "Kolhapur",
+            "Mobileno": "111",
+            "Age": "25"
+        },
+        {
+            "Name": "Manohar",
+            "Address": "Pune",
+            "Mobileno": "222",
+            "Age": "26"
+        },
+        {
+            "Name": "Ragini",
+            "Address": "mumbai",
+            "Mobileno": "333",
+            "Age": "27"
+        },
+        {
+            "Name": "Jyoti",
+            "Address": "Sangali",
+            "Mobileno": "444",
+            "Age": "26"
+        },
+        {
+            "Name": "Machindra",
+            "Address": "Ahmadnagar",
+            "Mobileno": "555",
+            "Age": "26"
+        }
+    ]
+}

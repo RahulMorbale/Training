@@ -1,0 +1,21 @@
+<h3 class="text-danger text-center ">Attribute Directive</h3>
+
+<h2 [ngStyle]="mystyle">Angular Directives</h2>
+                            <h3 appHighlighter>directive</h3>
+<table class="table">
+    <tr>
+        <th >sr no</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Mobile Number</th>
+    </tr>
+    <tr *ngFor="let stud of students; index as i ">
+        <td>{{i+1}}</td>
+        <td>{{stud.name}}</td>
+        <td>{{stud.Address}}</td>
+        <td>{{stud.Mobileno}}</td>
+    </tr>
+</table><br>
+
+
+<h1 appHighlighter>Hello !!!!!!!!!!!!!!</h1>
