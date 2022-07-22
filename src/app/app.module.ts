@@ -8,6 +8,7 @@ import { ComponentFundamentalsModule } from './component-fundamentals/component-
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http'
 import { HttpInterceptorService } from './component-fundamentals/Interceptors/http-interceptor.service';
 import { InterService } from './component-fundamentals/Interceptors/inter.service';
+import { FilesizePipe } from './component-fundamentals/Pipes/filesize.pipe';
 
 @NgModule({
   declarations: [

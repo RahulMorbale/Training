@@ -14,6 +14,12 @@ export class AppComponent {
   // display() {
     // alert("submitted")
   // }
+  show=false
+  value="show"
+  hideshow(value:any){
+    this.value=this.value=='show'?'hide':'show'
+    this.show=!this.show
+  }
     
 }
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { from, interval, map, range, take, takeLast } from 'rxjs';
+import { AppService } from '../../Service/app.service';
 @Component({
   selector: 'app-observable',
   templateUrl: './observable.component.html',
@@ -11,7 +12,7 @@ export class ObservableComponent implements OnInit {
   observablenames = from(this.names)
   obervablenumber = from(this.number) //## obervablenumber is a 'observable' created using 'from' operator
   intervalcount = interval(3000)
-  constructor() { }
+  constructor( private service:AppService) { }
   ngOnInit(): void {
     //## Rxjs operators=> from,interval,map,range,take,takelast,takeuntil,takewhile,skip.
     // this.obervablenumber.subscribe(value=>console.log(value))

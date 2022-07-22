@@ -1,3 +1,4 @@
+import { AppService } from './../../Service/app.service';
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -7,15 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AttributedireciveComponent implements OnInit {
 
+  constructor(private service: AppService) { }
   mystyle = {
-    'background-color':'yellow'
+    'background-color': 'yellow'
   }
 
   day = "friday"
-
-  constructor() { }
+  file = "10.56"
+  // mydata=this.service.collect
+  msg = "Hello from attribute page using setdata method"
   ngOnInit(): void {
-
+    this.service.setdata(this.msg)
+    
     // this.mystyle = {
     //   'background-color':  (this.day === 'friday') ? 'red' : 'yellow'
     // }

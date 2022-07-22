@@ -1,0 +1,28 @@
+<input type="text"  #text>
+<!-- <input type="text" (keyup.enter)="enter(text)" #text> -->
+<button (click)="enter(text)">Enter</button>
+<div [ngSwitch]="day">
+
+    <!-- <div *ngSwitch="day"> -->
+    <div *ngSwitchCase="0">
+        <h2>Today is monday</h2>
+    </div>
+    <div *ngSwitchCase="1">
+        <h2>Today is Tuesday</h2>
+    </div>
+    <div *ngSwitchCase="2">
+        <h2>Today is Wedensday</h2>
+    </div>
+    <div *ngSwitchCase="3">
+        <h2>Today is Thursday</h2>
+    </div>
+    <div *ngSwitchCase="4">
+        <h2>Today is Friday</h2>
+    </div>
+    <div *ngSwitchCase="5">
+        <h2>Today is Saturday</h2>
+    </div>
+    <div *ngSwitchDefault>
+        <h1>Entered number is Invalid</h1>
+    </div>
+</div>

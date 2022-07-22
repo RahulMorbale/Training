@@ -1,7 +1,7 @@
 import { AppService } from './../Service/app.service';
 import { Component, OnInit } from '@angular/core';
 import { from, interval, map, range, take, takeLast } from 'rxjs';
-   
+
 @Component({
   selector: 'app-practice',
   templateUrl: './practice.component.html',
@@ -14,8 +14,17 @@ export class PracticeComponent implements OnInit {
   //  intervalcounttwo=interval(3000)
   constructor(private service: AppService) { }
   uidata: any;
-  xyz:any
+  xyz: any
+  mac: any = ""
+  message: any=""
   ngOnInit(): void {
+    this.message = this.service.getuserdata()
+    console.log(this.message)
+    this.service.rahul.subscribe((res: any) => {
+      this.mac = res
+    })
+
+    // this.service.subservice$.subscribe((value:any)=>console.log(value))
     // this.observablenum.subscribe(value=>console.log(value))
     // this.observablenum.pipe(map(value=>value*2)).subscribe(x=>console.log(x))
     // this.intervalcount.subscribe(value=>console.log("Next= ",value))
@@ -28,16 +37,25 @@ export class PracticeComponent implements OnInit {
 
     //## Using HTTP get request
     // this.service.getData().subscribe(value => console.log("response = ", value))
-    this.service.getData().subscribe((element:any) => { 
-      this.xyz=element.studentDetails
-      console.log(this.xyz)
+    this.service.getData().subscribe((element: any) => {
+      this.xyz = element.studentDetails
+      // console.log(this.xyz)
       // this.uidata=JSON.stringify(this.xyz)
       // this.uidata=JSON.parse(this.uidata.age)
       // this.uidata=element
 
-      console.log("Hello from Interceptor from component")
+      // console.log("Hello from Interceptor from component")
     })
 
+  }
+  access() {
+    this.service.macchindra()
+  }
+
+
+  colors={
+    'background-color':'Red',
+    'font-size':'20px'
   }
 }
 

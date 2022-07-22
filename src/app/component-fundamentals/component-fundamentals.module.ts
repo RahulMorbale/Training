@@ -16,6 +16,19 @@ import { ObservableComponent } from './Observables/observable/observable.compone
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { PracticeComponent } from './practice/practice.component';
 import { MatTableModule } from '@angular/material/table';
+import { SubjectpraciceComponent } from './Subject/subjectpracice/subjectpracice.component';
+import { SubdemoComponent } from './Subject/sub/subdemo.component';
+import { FilesizePipe } from './Pipes/filesize.pipe';
+import { PipedemoComponent } from './Pipes/pipe/pipedemo.component';
+import { SearchPipe } from './Pipes/search.pipe';
+import { SubjectBehavioursubjectExampleComponent } from './behavioursubject/subject-behavioursubject-example/subject-behavioursubject-example.component';
+import { Demo1Component } from './behavioursubject/demo1/demo1.component';
+import { Demo2Component } from './behavioursubject/demo2/demo2.component';
+import { Demo3Component } from './behavioursubject/demo3/demo3.component';
+import { Demo4Component } from './behavioursubject/demo4/demo4.component';
+import { EventsComponent } from './events/events.component';
+import { NgswitchComponent } from './ngswitch/ngswitch.component';
+import { CsswitheventDirective } from './rivision/csswithevent.directive';
 
 @NgModule({
   declarations: [
@@ -31,6 +44,19 @@ import { MatTableModule } from '@angular/material/table';
     PagenotfoundComponent,
     ObservableComponent,
     PracticeComponent,
+    SubjectpraciceComponent,
+    SubdemoComponent,
+    FilesizePipe,
+    SearchPipe,
+    PipedemoComponent,
+    SubjectBehavioursubjectExampleComponent,
+    Demo1Component,
+    Demo2Component,
+    Demo3Component,
+    Demo4Component,
+    EventsComponent,
+    NgswitchComponent,
+    CsswitheventDirective,
 
 
   ],
@@ -52,6 +78,10 @@ import { MatTableModule } from '@angular/material/table';
     SignupformComponent,
     DemoComponent,
     MatSidenavModule,
+    Demo1Component,
+    Demo2Component,
+    Demo3Component,
+    Demo4Component,
 
     // NavigateComponent
 
